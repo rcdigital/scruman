@@ -4,7 +4,7 @@ define(['react'], function (React) {
   return React.createClass({
     render: function () {
       var cx = React.addons.classSet;
-      var postItClasses = cs({
+      var postItClasses = cx({
         'postit': true,
         'postit-role': this.props.role,
         'postit-impediment': this.props.impediment
