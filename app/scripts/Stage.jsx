@@ -1,18 +1,23 @@
 'use strict';
-define(['react', 'jsx!TestList'], function (React, TestList) {
-  var data = [
-    {name: "Pete Hunt", id:2},
-    {name: "Jordan Walke", id:5}
+define(['react', 'jsx!KanbamHeader', 'jsx!KanbamRow'], function (React, KanbamHeader, KanbamRow) {
+  var header = [
+    {name: 'TO-DO', id: 1},
+    {name: 'DOING', id: 2},
+    {name: 'DONE', id: 3}
   ];
+
+
+
   var Stage = React.createClass({
     render: function () {
+      console.log(this.props);
       return (
-        <div className="stage-test">
-          <TestList data={this.props.data} />
+        <div className="stage">
+          <KanbamHeader projectHeader={this.props.header} />
         </div>
       );
     }
   });
 
-  React.renderComponent(<Stage data={data} />, document.getElementById('stage-set'));
+  React.renderComponent(<Stage  header={header} />, document.getElementById('stage-set'));
 });
