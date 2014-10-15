@@ -10,6 +10,15 @@ define(['react'], function (React) {
             </div>
           );
       };
+
+      var storyItem = function () {
+        return (
+          <div className="story-item header-item">
+              <span className="header-title">Stories</span>
+          </div>
+        );
+      };
+
       return (
         <section className="kanbam-header">
           {this.props.projectHeader.map(headerItems)}
