@@ -10,9 +10,17 @@ var UserSchema = new mongoose.Schema({
   picture: String,
   socialId: String,
   baseAmount: Number,
-  role: roleSchema,
   createdAt: {type: Date, default: Date.now},
   updateAt: {type: Date, default: Date.now}
+});
+
+UserSchema.plugin(require('mongoose-role'), {
+  roles: ['public', 'user', 'admin'],
+  accessLevels: {
+    'public': ['public', 'user', 'admin'],
+    'user': ['user', 'admin'],
+    'admin': ['admin']
+  }
 });
 
 var User = mongoose.model('User', UserSchema);
