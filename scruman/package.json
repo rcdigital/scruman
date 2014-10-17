@@ -1,0 +1,19 @@
+{
+  "name": "scruman",
+  "description": "An awesome real time application",
+  "version": "0.0.1",
+  "author": "Me <me@mydomain.com>",
+  "private": true,
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "dependencies": {
+    "mongoose": "^3.8.17",
+    "mongoose-role": "^1.1.0",
+    "socketstream": "0.3.x",
+    "ss-hogan": "0.1.x"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
