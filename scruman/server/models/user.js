@@ -19,6 +19,7 @@ UserSchema.plugin(require('mongoose-role'), {
   accessLevels: {
     'public': ['public', 'user', 'admin'],
     'user': ['user', 'admin'],
+    'manager': ['admin'],
     'admin': ['admin']
   }
 });
